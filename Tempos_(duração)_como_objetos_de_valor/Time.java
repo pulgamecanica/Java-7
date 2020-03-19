@@ -99,7 +99,29 @@ public class Time{
 			return 1;
 		else
 			return -1;
+	}	
+
+
+
+	
+	@Override
+	public int hashCode() {
+		return seconds;
 	}
+	@Override		
+	public boolean equals(Object obj){
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Time other = (Time) obj;
+		if (getSecondsAll() != other.getSecondsAll())
+			return false;
+		return true;
+	}
+
 	public String toString(){
 		return "The time is: " + getH() + ":" + getM() + ":" + getS();
 	}
