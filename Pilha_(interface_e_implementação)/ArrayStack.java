@@ -1,25 +1,25 @@
 import java.util.*;
 
-public class ArrayStack implements Stack<String>{
+public class ArrayStack implements Stack<T>{
 
-	private ArrayList<String> list = new ArrayList<>();
+	private ArrayList<T> list = new ArrayList<>();
 	private int countElements = 0;
 
 	public ArrayStack(){
 	}
 
 	@Override
-	public void push(String element){
+	public void push(T element){
 		list.add(element);
 		countElements++;
 	} // insere um elemento no topo da pilha.
 	@Override
-	public String peek(){
+	public T peek(){
 		return list.get(size() - 1);
 	} // consulta o elemento que está no topo da pilha (caso exista). FIM ULTIMO
 	@Override
-	public String pop(){
-		String result = peek();
+	public T pop(){
+		T result = peek();
 		list.remove(size() - 1);
 		countElements--;
 		return result;
