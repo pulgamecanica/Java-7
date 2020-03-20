@@ -18,5 +18,6 @@ public class Test{
 		list.sort(Comparator.comparing(e -> e.getSecondsAll()));
 		for(Time x: list)
 			System.out.println(x);
+		System.out.println("***********************************************************************************************");
 	}
 }
